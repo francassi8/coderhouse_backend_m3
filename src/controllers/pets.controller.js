@@ -43,10 +43,27 @@ const createPetWithImage = async(req,res) =>{
     const result = await petsService.create(pet);
     res.send({status:"success",payload:result})
 }
+
+const generatePets = async (req, res) => {
+    const numPets = req.query.numPets;
+    const pets = [];
+    for (let i = 0; i < numPets; i++) {
+        const pet = PetDTO.getPetInputFrom({
+            name: `Mock Pet ${i}`,
+            specie: 'Mock Specie',
+            birthDate: new Date()}
+        );
+        const result = await petsService.create(pet);
+        pets.push(result);
+    }
+    res.send({status:"success",pets})
+}
+
 export default {
     getAllPets,
     createPet,
     updatePet,
     deletePet,
-    createPetWithImage
+    createPetWithImage,
+    generatePets
 }
