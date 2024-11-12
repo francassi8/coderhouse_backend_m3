@@ -8,7 +8,6 @@ const router = Router();
 router.get('/',petsController.getAllPets);
 router.post('/',petsController.createPet);
 router.post('/withimage',uploader.single('image'), petsController.createPetWithImage);
-router.post('/mockingpets',petsController.generatePets);
 router.put('/:pid',petsController.updatePet);
 router.delete('/:pid',petsController.deletePet);
 
