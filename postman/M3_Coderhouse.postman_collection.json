@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "42e77c2a-e7ac-47bc-b0a8-3d337facffb5",
+		"name": "M3_Coderhouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22503229"
+	},
+	"item": [
+		{
+			"name": "Mock Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mocks/mockingUsers?numUsers=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"mockingUsers"
+					],
+					"query": [
+						{
+							"key": "numUsers",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mock Pets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mocks/mockingPets?numPets=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"mockingPets"
+					],
+					"query": [
+						{
+							"key": "numPets",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mock ALL data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/mocks/generateData?numPets=1&numUsers=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"generateData"
+					],
+					"query": [
+						{
+							"key": "numPets",
+							"value": "1"
+						},
+						{
+							"key": "numUsers",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/pets/"
+			},
+			"response": []
+		}
+	]
+}
